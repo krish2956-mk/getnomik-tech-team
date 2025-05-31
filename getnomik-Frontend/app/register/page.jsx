@@ -14,21 +14,15 @@ const RegisterPage = () => {
       title: 'Advocate',
       description: 'Join as a legal professional to provide expert services',
       icon: '⚖️',
-      path: '/register/advocate'
+      path: '/register/advocate/auth'
     },
-    {
-      id: 'admin',
-      title: 'Admin',
-      description: 'Manage and oversee platform operations',
-      icon: '👨‍💼',
-      path: '/register/admin'
-    },
+    
     {
       id: 'client',
       title: 'Client',
       description: 'Access legal services and connect with advocates',
       icon: '👤',
-      path: '/register/client'
+      path: '/register/client/auth'
     }
   ];
 
@@ -62,19 +56,19 @@ const RegisterPage = () => {
         </div>
 
         {/* Role Selection Cards */}
-        <div className="grid grid-cols-1  md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[10vh] max-w-xl mx-auto">
           {roles.map((role) => (
             <button
               key={role.id}
               onClick={() => handleRoleSelect(role)}
-              className="relative group bg-white p-8 rounded-xl shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] hover:shadow-lg transition-all duration-300 border border-gray-600  hover:border-green-500"
+              className="relative group bg-white p-6 rounded-xl shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] hover:shadow-lg transition-all duration-300 border border-gray-600 hover:border-green-500"
             >
-              <div className="text-center  ">
+              <div className="text-center">
                 <span className="text-4xl mb-4 block">{role.icon}</span>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {role.title}
                 </h3>
-                <p className="text-gray-600 text-sm">{role.description}</p>
+                <p className="text-sm text-gray-600">{role.description}</p>
               </div>
               <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-green-500 transition-colors duration-300"></div>
             </button>

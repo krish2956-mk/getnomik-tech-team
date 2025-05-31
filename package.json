@@ -1,0 +1,7 @@
+{
+  "name": "getnomik-tech-team-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix getnomik-Frontend run dev"
+  }
+} 
